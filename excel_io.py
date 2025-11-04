@@ -65,7 +65,7 @@ def append_and_dedup(base_path: str | Path, new_rows: List[Dict[str, Any]], out_
     df_new = ensure_schema_columns(df_new)
 
     df_concat = pd.concat([df_old, df_new], ignore_index=True)
-    df_concat = df_concat.drop_duplicates(subset=["Folio", "Fecha", "Máquina"], keep="first")
+    df_concat = df_concat.drop_duplicates(subset=["Folio","Fecha","Máquina"], keep="first")
     df_concat = cast_types(df_concat)
 
     write_preserving_other_sheets(out_path, df_concat)
