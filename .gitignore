@@ -18,3 +18,7 @@ Thumbs.db
 # Entornos de desarrollo
 .idea/
 .vscode/
+
+# Ignorar todos los exe, excepto los de releases
+*.exe
+!releases/*.exe
